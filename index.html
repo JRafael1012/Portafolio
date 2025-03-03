@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      header {
+        background-color: red;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      #contacto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Mi Portafolio Profesional</header>
+    <nav>
+      <ul>
+        <li>
+          <a href="#inicio" class="nav-link" data-target="inicio">Inicio</a>
+        </li>
+        <li>
+          <a href="#proyectos" class="nav-link" data-target="proyectos"
+            >Proyectos</a
+          >
+        </li>
+        <li>
+          <a href="#habilidades" class="nav-link" data-target="habilidades"
+            >Habilidades</a
+          >
+        </li>
+        <li><a href="#blog" class="nav-link" data-target="blog">Blog</a></li>
+        <li>
+          <a href="#contacto" class="nav-link" data-target="contacto"
+            >Contacto</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <section id="inicio" class="content-section">
+      <h1>Bienvenido a mi Portafolio</h1>
+      <p>Soy un desarrollador apasionado por la tecnología y la innovación.</p>
+      <h2>Datos Personales</h2>
+      <p><strong>Nombre:</strong> Joanatan Rafael Arlant Cortes</p>
+      <p><strong>Edad:</strong> 16</p>
+      <p><strong>Estudiante:</strong> SENA</p>
+      <p><strong>Correo:</strong> rafaelarlant1012@gmail.com</p>
+    </section>
+
+    <section id="proyectos" class="content-section" style="display: none">
+      <h2>Mis Proyectos</h2>
+      <p>Aquí encontrarás algunos de mis proyectos destacados.</p>
+      <ul>
+        <li><strong>Proyecto 1:</strong> Página Personal del potafolio</li>
+        <li><strong>Proyecto 2:</strong> --</li>
+        <li><strong>Proyecto 3:</strong> --</li>
+      </ul>
+    </section>
+
+    <section id="habilidades" class="content-section" style="display: none">
+      <h2>Habilidades</h2>
+      <ul>
+        <li>🔹 HTML, CSS y JavaScript</li>
+        <li>🔹 Python y Arduino</li>
+        <li>🔹 Desarrollo de robots</li>
+        <li>🔹 Diseño de interfaces</li>
+      </ul>
+    </section>
+
+    <section id="blog" class="content-section" style="display: none">
+      <h2>Blog</h2>
+      <article>
+        <h3>Mi experiencia programando con Arduino</h3>
+        <p>Arduino me ha permitido construir robots increíbles...</p>
+        <a href="#" onclick="mostrarArticulo(event)">Leer más</a>
+        <div id="articuloCompleto" style="display: none">
+          <p>
+            En este artículo, compartiré mi experiencia usando Arduino y cómo me
+            ha ayudado en mis proyectos...
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section id="contacto" class="content-section" style="display: none">
+      <h2>Contacto</h2>
+      <p>Envíame un mensaje directo a WhatsApp.</p>
+      <a
+        href="https://wa.me/3238176273?text=Hola,%20quiero%20ponerme%20en%20contacto%20contigo."
+        target="_blank"
+      >
+        <button>Enviar mensaje por WhatsApp</button>
+      </a>
+      <p>Gracias, estaré en contacto en poco tiempo. ¡Un gusto conocerlo!</p>
+    </section>
+
+    <footer>
+      <p>
+        &copy; 2025 Joanatan Rafael Arlant Cortes - Todos los derechos
+        reservados.
+      </p>
+    </footer>
+
+    <script>
+      function mostrarArticulo(event) {
+        event.preventDefault();
+        document.getElementById("articuloCompleto").style.display = "block";
+      }
+
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", function (event) {
+          event.preventDefault();
+          let target = this.getAttribute("data-target");
+          document.querySelectorAll(".content-section").forEach((section) => {
+            section.style.display = "none";
+          });
+          document.getElementById(target).style.display = "block";
+        });
+      });
+    </script>
+  </body>
+</html>

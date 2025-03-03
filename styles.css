@@ -1,0 +1,87 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Fondo de la página */
+body {
+  background: url("./forndo.png") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+/* Estilos del encabezado */
+header {
+  background-color: rgba(255, 0, 0, 0.8);
+  padding: 20px;
+  text-align: center;
+}
+
+/* Menú de navegación */
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+/* Secciones */
+.content-section {
+  padding: 50px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  margin: 20px;
+}
+
+/* Títulos */
+.content-section h2 {
+  color: red;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin-top: 10px;
+}
+
+form label,
+form input,
+form textarea {
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: rgb(170, 0, 0);
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkred;
+}
+
+/* Pie de página */
+footer {
+  background-color: rgba(255, 0, 0, 0.8);
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
